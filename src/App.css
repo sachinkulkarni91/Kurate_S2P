@@ -1,0 +1,234 @@
+/* Top Navigation Bar */
+.top-navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #1a3c7c 0%, #2e5ca6 100%);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 0 0 18px;
+  min-height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1.5px solid #e3e6ef;
+  position: relative;
+  z-index: 10;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  min-width: 700px;
+}
+.nav-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-right: 32px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.nav-icon {
+  color: #fff;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 0 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-icon:hover {
+  color: #ffe082;
+}
+.nav-badge {
+  background: #e53935;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  padding: 1px 6px;
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(229,57,53,0.13);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(90deg, #1a3c7c 0%, #2e5ca6 100%);
+  color: #fff;
+  padding: 24px 0 16px 32px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1.5px solid #e3e6ef;
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb {
+  color: #6b7a99;
+  font-size: 1rem;
+  margin: 18px 0 0 36px;
+  letter-spacing: 0.2px;
+}
+
+.page-container {
+  background: #fff;
+  margin: 36px auto 0 auto;
+  padding: 36px 44px 40px 44px;
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.09);
+  max-width: 1100px;
+  min-width: 340px;
+}
+
+h1, h2 {
+  color: #1a3c7c;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.support-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px 32px;
+  margin-top: 28px;
+}
+
+.resource-card {
+  border: 1.5px solid #e3e6ef;
+  border-radius: 12px;
+  background: #f9fafc;
+  width: 320px;
+  min-height: 148px;
+  padding: 26px 22px 22px 22px;
+  box-shadow: 0 1.5px 6px rgba(0,0,0,0.035);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+}
+.resource-card:hover {
+  box-shadow: 0 6px 22px rgba(26,60,124,0.13);
+  border: 1.5px solid #bfcbe3;
+}
+.resource-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.13rem;
+  color: #2e5ca6;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+.resource-card p {
+  color: #6b7a99;
+  font-size: 0.99rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.resource-card button {
+  background: #2e5ca6;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 22px;
+  font-size: 1.01rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(46,92,166,0.07);
+  outline: none;
+}
+.resource-card button:disabled {
+  background: #bfcbe3;
+  cursor: not-allowed;
+  color: #f4f6fa;
+}
+.resource-card button:hover:not(:disabled),
+.resource-card button:focus-visible:not(:disabled) {
+  background: #1a3c7c;
+  box-shadow: 0 2px 8px rgba(46,92,166,0.13);
+}
+
+@media (max-width: 900px) {
+  .support-resources {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .page-container {
+    padding: 24px 8vw;
+  }
+}
+
+.form-section {
+  margin-top: 28px;
+}
+.form-section label {
+  font-weight: 500;
+  color: #1a3c7c;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 1.01rem;
+}
+.form-section input,
+.form-section select,
+.form-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1.5px solid #cfd8e3;
+  border-radius: 7px;
+  font-size: 1.01rem;
+  background: #f7f8fa;
+  transition: border 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  border: 1.5px solid #2e5ca6;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(46,92,166,0.09);
+}
+.form-section textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+.form-section button[type="submit"] {
+  background: #2e5ca6;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 32px;
+  font-size: 1.13rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(46,92,166,0.07);
+}
+.form-section button[type="submit"]:hover,
+.form-section button[type="submit"]:focus-visible {
+  background: #1a3c7c;
+  box-shadow: 0 2px 8px rgba(46,92,166,0.13);
+}
